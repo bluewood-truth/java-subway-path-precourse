@@ -24,6 +24,7 @@ public class SearchShortestPathController {
 
     private static void tryToSearchShortestPath(WeightType type) {
         SearchPathQuery query = new SearchPathQuery(type, inputStartStation(), inputEndStation());
+        OutputView.printResult(query.queryResult());
     }
 
     private static String inputStartStation() {
