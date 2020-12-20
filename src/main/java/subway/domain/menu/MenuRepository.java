@@ -2,7 +2,6 @@ package subway.domain.menu;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import subway.controller.ApplicationController;
 import subway.controller.MenuController;
 import subway.controller.SearchShortestPathController;
