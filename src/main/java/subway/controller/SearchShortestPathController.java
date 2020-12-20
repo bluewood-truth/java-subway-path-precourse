@@ -40,7 +40,7 @@ public class SearchShortestPathController {
     
     private static void catchError(Exception exception) {
         OutputView.printError(exception);
-        MenuController.callMainMenu();
+        MenuController.callSearchPathMenu();
     }
 
     public static void backToMainMenu() {
