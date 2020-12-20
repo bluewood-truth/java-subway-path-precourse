@@ -6,7 +6,7 @@ import subway.controller.ApplicationController;
 import subway.controller.MenuController;
 import subway.controller.SearchShortestPathController;
 
-public class MenuRepository {
+public class Menus {
     private static final Map<MenuType, Menu> menus = new HashMap<>();
 
     private static final String MAIN = "메인 화면";

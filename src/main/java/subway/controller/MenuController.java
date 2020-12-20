@@ -1,18 +1,18 @@
 package subway.controller;
 
 import subway.domain.menu.Menu;
-import subway.domain.menu.MenuRepository;
+import subway.domain.menu.Menus;
 import subway.domain.menu.MenuType;
 import subway.view.InputView;
 import subway.view.OutputView;
 
 public class MenuController {
     public static void callMainMenu() {
-        showMenu(MenuRepository.getMenu(MenuType.MAIN));
+        showMenu(Menus.getMenu(MenuType.MAIN));
     }
 
     public static void callSearchPathMenu() {
-        showMenu(MenuRepository.getMenu(MenuType.SEARCH_PATH));
+        showMenu(Menus.getMenu(MenuType.SEARCH_PATH));
     }
 
     private static void showMenu(Menu menu) {
