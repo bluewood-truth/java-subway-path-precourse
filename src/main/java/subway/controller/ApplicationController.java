@@ -8,4 +8,8 @@ public class ApplicationController {
         InputView.setScanner(scanner);
         MenuController.callMainMenu();
     }
+
+    public static void quit() {
+        System.exit(0);
+    }
 }

@@ -3,6 +3,7 @@ package subway.domain.menu;
 import java.util.HashMap;
 import java.util.Map;
 
+import subway.controller.ApplicationController;
 import subway.controller.MenuController;
 import subway.controller.SearchShortestPathController;
 
@@ -37,7 +38,7 @@ public class MenuRepository {
         Menu menu = Menu.createWithMenuItems(
             MAIN,
             new MenuItem(KEY_ONE, SEARCH_PATH, MenuController::callSearchPathMenu),
-            new MenuItem(KEY_QUIT, QUIT, null));
+            new MenuItem(KEY_QUIT, QUIT, ApplicationController::quit));
 
         menus.put(MenuType.MAIN, menu);
     }
