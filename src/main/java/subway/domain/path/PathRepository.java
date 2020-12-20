@@ -2,13 +2,19 @@ package subway.domain.path;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.jgrapht.GraphPath;
 import subway.domain.weight.WeightType;
 
 public class PathRepository {
-    private static Map<WeightType, ShortestPath> path = new HashMap<>();
+    private static Map<WeightType, WeightedGraph> path = new HashMap<>();
 
     static {
-        path.put(WeightType.DISTANCE, new ShortestPath(WeightType.DISTANCE));
-        path.put(WeightType.TIME, new ShortestPath(WeightType.TIME));
+        path.put(WeightType.DISTANCE, new WeightedGraph(WeightType.DISTANCE));
+        path.put(WeightType.TIME, new WeightedGraph(WeightType.TIME));
+    }
+
+    public static GraphPath getShortestPath(WeightType type, String startStation, String endStation) {
+        WeightedGraph pathGraph = path.get(type);
+        return pathGraph.getShortestPath(startStation, endStation);
     }
 }
