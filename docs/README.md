@@ -65,25 +65,25 @@
 
 ## 프로그래밍 요구사항
 
-- [ ] [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)를 준수한다. (단 indent는 4)
-- [ ] indent depth는 2까지만 허용한다.
-- [ ] 3항 연산자를 쓰지 않는다.
-- [ ] else, switch/case 예약어를 사용하지 않는다.
-- [ ] 예외 상황 시 `[ERROR]`로 시작하는 에러 문구를 출력한다.
+- [x] [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)를 준수한다. (단 indent는 4)
+- [x] indent depth는 2까지만 허용한다.
+- [x] 3항 연산자를 쓰지 않는다.
+- [x] else, switch/case 예약어를 사용하지 않는다.
+- [x] 예외 상황 시 `[ERROR]`로 시작하는 에러 문구를 출력한다.
 - 프로그래밍 요구사항 - Application
 
-  - [ ] Application 클래스를 활용해 구현한다.
-  - [ ] Application의 패키지 구조는 변경하지 않는다.
-  - [ ] Application 클래스에 있는 Scanner를 사용하고 별도의 Scanner 객체를 만들지 않는다.
+  - [x] Application 클래스를 활용해 구현한다.
+  - [x] Application의 패키지 구조는 변경하지 않는다.
+  - [x] Application 클래스에 있는 Scanner를 사용하고 별도의 Scanner 객체를 만들지 않는다.
 - 프로그래밍 요구사항 - Station, Line
 
-  - [ ] Station, Line 클래스를 활용하여 지하철역과 노선을 구현해야 한다.
-  - [ ] 제공하는 각 클래스의 기본 생성자를 추가할 수 없다.
-  - [ ] 필드(인스턴스 변수)인 name의 접근 제어자 private을 변경할 수 없다.
-  - [ ] 가능하면 setter 메소드(ex. setXXX)를 추가하지 않고 구현한다.
+  - [x] Station, Line 클래스를 활용하여 지하철역과 노선을 구현해야 한다.
+  - [x] 제공하는 각 클래스의 기본 생성자를 추가할 수 없다.
+  - [x] 필드(인스턴스 변수)인 name의 접근 제어자 private을 변경할 수 없다.
+  - [x] 가능하면 setter 메소드(ex. setXXX)를 추가하지 않고 구현한다.
 - 프로그래밍 요구사항 - StationRepository, LineRepository
-  - [ ] 필요 시 StationRepository, LineRepository 이 외 추가로 Repository를 만들 수 있다.
-  - [ ] 추가로 생성되는 객체에 대해서 XXXRepository 네이밍으로 저장 클래스를 추가한다.
-  - [ ] 객체들의 상태를 관리하기 위해서 XXXRepository 클래스를 활용해 저장 로직을 구현해야 한다.
-  - [ ] **작성된 메서드는 수정할 수 없고**, 필요에 따라 메서드를 자유롭게 추가할 수 있다.
+  - [x] 필요 시 StationRepository, LineRepository 이 외 추가로 Repository를 만들 수 있다.
+  - [x] 추가로 생성되는 객체에 대해서 XXXRepository 네이밍으로 저장 클래스를 추가한다.
+  - [x] 객체들의 상태를 관리하기 위해서 XXXRepository 클래스를 활용해 저장 로직을 구현해야 한다.
+  - [x] **작성된 메서드는 수정할 수 없고**, 필요에 따라 메서드를 자유롭게 추가할 수 있다.
 
