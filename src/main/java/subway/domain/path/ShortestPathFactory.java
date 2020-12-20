@@ -14,12 +14,11 @@ import subway.domain.weight.WeightType;
 
 public class ShortestPathFactory {
     private static WeightedMultigraph<String, DefaultWeightedEdge> graph;
-    private static WeightType type;
 
-    public static DijkstraShortestPath getShortestPath(WeightType type) {
+    public static DijkstraShortestPath getShortestPath(WeightType weightType) {
         graph = new WeightedMultigraph(DefaultWeightedEdge.class);
         setVertexStations();
-        setEdgeWeights();
+        setEdgeWeights(weightType);
         return new DijkstraShortestPath(graph);
     }
 
@@ -29,17 +28,17 @@ public class ShortestPathFactory {
         }
     }
 
-    private static void setEdgeWeights() {
+    private static void setEdgeWeights(WeightType weightType) {
         for (Line line : LineRepository.lines()) {
-            setEdgeWeightsForLine(line.getStations());
+            setEdgeWeightsForLine(line.getStations(), weightType);
         }
     }
     
-    private static void setEdgeWeightsForLine(List<String> stations) {
+    private static void setEdgeWeightsForLine(List<String> stations, WeightType weightType) {
         for (int i = 0; i < stations.size() - 1; i++) {
             String firstStation = stations.get(i);
             String secondStation = stations.get(i + 1);
-            double weight = WeightRepository.getWeight(firstStation, secondStation, type);
+            double weight = WeightRepository.getWeight(firstStation, secondStation, weightType);
             graph.setEdgeWeight(graph.addEdge(firstStation, secondStation), weight);
         } 
     }
