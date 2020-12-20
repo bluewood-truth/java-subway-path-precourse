@@ -49,7 +49,8 @@ public class MenuRepository {
                     SearchShortestPathController::SearchShortestDistancePath),
             new MenuItem(KEY_TWO, SHORTEST_TIME, 
                     SearchShortestPathController::SearchShortestTimePath),
-            new MenuItem(KEY_BACK, BACK, MenuController::callMainMenu));
+            new MenuItem(KEY_BACK, BACK, 
+                    SearchShortestPathController::backToMainMenu));
 
         menus.put(MenuType.SEARCH_PATH, menu);
     }

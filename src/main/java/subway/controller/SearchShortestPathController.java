@@ -9,6 +9,7 @@ public class SearchShortestPathController {
     public static void SearchShortestDistancePath() {
         try {
             tryToSearchShortestPath(WeightType.DISTANCE);
+            backToMainMenu();
         } catch (Exception exception) {
             catchError(exception);
         }
@@ -39,6 +40,10 @@ public class SearchShortestPathController {
     
     private static void catchError(Exception exception) {
         OutputView.printError(exception);
+        MenuController.callMainMenu();
+    }
+
+    public static void backToMainMenu() {
         MenuController.callMainMenu();
     }
 }
