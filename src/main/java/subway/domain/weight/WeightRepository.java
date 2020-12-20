@@ -19,10 +19,10 @@ public class WeightRepository {
         weights.put(getKey("양재역", "양재시민의숲역"), new Weight(10, 5));
     }
 
-    public static double getWeight(String firstStation, String secondStation, WeightType type) {
+    public static double getWeight(String firstStation, String secondStation, WeightType weightType) {
         Set<String> key = getKey(firstStation, secondStation);
         Weight weight = weights.get(key);
-        return weight.get(type);
+        return weight.get(weightType);
     }
 
     private static Set<String> getKey(String firstStation, String secondStation) {

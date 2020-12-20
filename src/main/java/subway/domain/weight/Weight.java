@@ -11,7 +11,7 @@ public class Weight {
         this.weightValues.put(WeightType.TIME, time);
     }
 
-    public double get(WeightType type) {
-        return weightValues.get(type);
+    public double get(WeightType weightType) {
+        return weightValues.get(weightType);
     }
 }

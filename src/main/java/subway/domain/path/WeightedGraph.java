@@ -7,8 +7,8 @@ import subway.domain.weight.WeightType;
 public class WeightedGraph {
     private DijkstraShortestPath graph;
 
-    public WeightedGraph(WeightType type) {
-        this.graph = ShortestPathFactory.getShortestPath(type);
+    public WeightedGraph(WeightType weightType) {
+        this.graph = WeightedGraphFactory.getWeightedGraph(weightType);
     }
 
     public GraphPath getShortestPath(String startStation, String endStation){

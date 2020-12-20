@@ -11,10 +11,10 @@ import subway.domain.station.StationRepository;
 import subway.domain.weight.WeightRepository;
 import subway.domain.weight.WeightType;
 
-public class ShortestPathFactory {
+public class WeightedGraphFactory {
     private static WeightedMultigraph<String, DefaultWeightedEdge> graph;
 
-    public static DijkstraShortestPath getShortestPath(WeightType weightType) {
+    public static DijkstraShortestPath getWeightedGraph(WeightType weightType) {
         graph = new WeightedMultigraph(DefaultWeightedEdge.class);
         setVertexStations();
         setEdgeWeights(weightType);

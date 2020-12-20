@@ -13,8 +13,8 @@ public class PathRepository {
         path.put(WeightType.TIME, new WeightedGraph(WeightType.TIME));
     }
 
-    public static GraphPath getShortestPath(WeightType type, String startStation, String endStation) {
-        WeightedGraph pathGraph = path.get(type);
+    public static GraphPath getShortestPath(WeightType weightType, String startStation, String endStation) {
+        WeightedGraph pathGraph = path.get(weightType);
         return pathGraph.getShortestPath(startStation, endStation);
     }
 }

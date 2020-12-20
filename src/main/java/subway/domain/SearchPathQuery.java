@@ -35,7 +35,7 @@ public class SearchPathQuery {
         this.endStation = endStation;
     }
 
-    public QueryResult queryResult() {
+    public QueryResult result() {
         GraphPath shortestPath = PathRepository.getShortestPath(weightType, startStation, endStation);
         Map<WeightType, Double> weights = getWeights(shortestPath);
         List<String> path = shortestPath.getVertexList();
